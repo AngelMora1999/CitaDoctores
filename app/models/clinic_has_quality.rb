@@ -10,6 +10,7 @@
 #
 
 class ClinicHasQuality < ApplicationRecord
+  #Conexiones
   belongs_to :clinic
   belongs_to :quality
 end

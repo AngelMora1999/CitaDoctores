@@ -21,4 +21,9 @@
 #
 
 class Specialty < ApplicationRecord
+  #Conexiones
+  has_many :doctor_has_specialties
+  has_many :doctors, through: :doctor_has_specialties
+  has_many :clinic_has_specialties
+  has_many :clinics, through: :clinic_has_specialties
 end

@@ -10,6 +10,7 @@
 #
 
 class ConsultingRoomHasQuality < ApplicationRecord
+  #Conexiones
   belongs_to :consulting_room
   belongs_to :quality
 end

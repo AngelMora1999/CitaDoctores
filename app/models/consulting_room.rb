@@ -23,4 +23,6 @@ class ConsultingRoom < ApplicationRecord
   #Conexiones
   belongs_to :user
   has_one :doctor
+  has_many :consulting_room_has_qualities
+  has_many :qualities, through: :consulting_room_has_qualities
 end

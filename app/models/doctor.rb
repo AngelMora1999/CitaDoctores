@@ -44,7 +44,10 @@ class Doctor < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
   #Conexiones
   belongs_to :clinic
   belongs_to :consulting_room
+  has_many :doctor_has_specialties
+  has_many :specialties, through: :doctor_has_specialties
 end

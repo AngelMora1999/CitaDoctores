@@ -12,4 +12,9 @@
 #
 
 class Quality < ApplicationRecord
+  #Conexiones
+  has_many :clinic_has_qualities
+  has_many :clinics, through: :clinic_has_qualities
+  has_many :consulting_room_has_qualities
+  has_many :consulting_rooms, through: :consulting_room_has_qualities
 end

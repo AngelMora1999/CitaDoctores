@@ -23,4 +23,8 @@ class Clinic < ApplicationRecord
   #Conexiones
   belongs_to :user
   has_many :doctors
+  has_many :clinic_has_specialties
+  has_many :specialties, through: :clinic_has_specialties
+  has_many :clinic_has_qualities
+  has_many :qualities, through: :clinic_has_qualities
 end

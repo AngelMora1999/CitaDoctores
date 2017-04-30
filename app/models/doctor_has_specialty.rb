@@ -10,6 +10,7 @@
 #
 
 class DoctorHasSpecialty < ApplicationRecord
+  #Conexiones
   belongs_to :doctor
   belongs_to :specialty
 end
