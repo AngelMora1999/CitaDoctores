@@ -36,9 +36,9 @@ Rails.application.routes.draw do
   end
 
   #Modelos
-  resources :clinics
-  resources :consulting_rooms
-  resources :specialties
-  resources :qualities
+  resources :clinicas, controller: :clinics, as: :clinics
+  resources :consultorios, controller: :consulting_rooms, as: :consulting_rooms
+  resources :especialidades, controller: :specialties, as: :specialties
+  resources :cualidades, controller: :qualities, as: :qualities
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
