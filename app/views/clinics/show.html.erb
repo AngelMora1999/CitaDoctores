@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @clinic.logo %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @clinic.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @clinic.description %>
+</p>
+
+<p>
+  <strong>Founded since:</strong>
+  <%= @clinic.founded_since %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @clinic.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @clinic.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @clinic.address %>
+</p>
+
+<p>
+  <strong>Visit count:</strong>
+  <%= @clinic.visit_count %>
+</p>
+
+<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
+<%= link_to 'Back', clinics_path %>
