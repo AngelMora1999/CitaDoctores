@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @specialty.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @specialty.description %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @specialty.logo %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <%= @specialty.cover %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @specialty.icon %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @specialty.color %>
+</p>
+
+<p>
+  <strong>Visit count:</strong>
+  <%= @specialty.visit_count %>
+</p>
+
+<%= link_to 'Edit', edit_specialty_path(@specialty) %> |
+<%= link_to 'Back', specialties_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Specialties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Logo</th>
+      <th>Cover</th>
+      <th>Icon</th>
+      <th>Color</th>
+      <th>Visit count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specialties.each do |specialty| %>
+      <tr>
+        <td><%= specialty.title %></td>
+        <td><%= specialty.description %></td>
+        <td><%= specialty.logo %></td>
+        <td><%= specialty.cover %></td>
+        <td><%= specialty.icon %></td>
+        <td><%= specialty.color %></td>
+        <td><%= specialty.visit_count %></td>
+        <td><%= link_to 'Show', specialty %></td>
+        <td><%= link_to 'Edit', edit_specialty_path(specialty) %></td>
+        <td><%= link_to 'Destroy', specialty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Specialty', new_specialty_path %>

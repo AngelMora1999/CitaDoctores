@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430015136) do
+ActiveRecord::Schema.define(version: 20170430030107) do
 
   create_table "clinics", force: :cascade do |t|
     t.string   "logo_file_name"
@@ -109,6 +109,24 @@ ActiveRecord::Schema.define(version: 20170430015136) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_patients_on_email", unique: true
     t.index ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true
+  end
+
+  create_table "specialties", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.text     "icon"
+    t.string   "color"
+    t.integer  "visit_count",        default: 0
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "users", force: :cascade do |t|
