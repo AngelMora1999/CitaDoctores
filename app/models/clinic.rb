@@ -20,4 +20,7 @@
 #
 
 class Clinic < ApplicationRecord
+  #Conexiones
+  belongs_to :user
+  has_many :doctors
 end

@@ -20,5 +20,7 @@
 #
 
 class ConsultingRoom < ApplicationRecord
+  #Conexiones
   belongs_to :user
+  has_one :doctor
 end
