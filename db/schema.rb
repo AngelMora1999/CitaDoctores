@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430032627) do
+ActiveRecord::Schema.define(version: 20170430033514) do
+
+  create_table "clinic_has_qualities", force: :cascade do |t|
+    t.integer  "clinic_id"
+    t.integer  "quality_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["clinic_id"], name: "index_clinic_has_qualities_on_clinic_id"
+    t.index ["quality_id"], name: "index_clinic_has_qualities_on_quality_id"
+  end
 
   create_table "clinic_has_specialties", force: :cascade do |t|
     t.integer  "clinic_id"
