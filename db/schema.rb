@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430032337) do
+ActiveRecord::Schema.define(version: 20170430032627) do
+
+  create_table "clinic_has_specialties", force: :cascade do |t|
+    t.integer  "clinic_id"
+    t.integer  "specialty_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["clinic_id"], name: "index_clinic_has_specialties_on_clinic_id"
+    t.index ["specialty_id"], name: "index_clinic_has_specialties_on_specialty_id"
+  end
 
   create_table "clinics", force: :cascade do |t|
     t.string   "logo_file_name"
