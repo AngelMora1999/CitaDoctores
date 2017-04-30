@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @consulting_room.logo %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @consulting_room.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @consulting_room.description %>
+</p>
+
+<p>
+  <strong>Founded since:</strong>
+  <%= @consulting_room.founded_since %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @consulting_room.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @consulting_room.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @consulting_room.address %>
+</p>
+
+<p>
+  <strong>Visit count:</strong>
+  <%= @consulting_room.visit_count %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @consulting_room.user %>
+</p>
+
+<%= link_to 'Edit', edit_consulting_room_path(@consulting_room) %> |
+<%= link_to 'Back', consulting_rooms_path %>

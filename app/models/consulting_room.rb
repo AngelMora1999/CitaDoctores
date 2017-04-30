@@ -1,0 +1,3 @@
+class ConsultingRoom < ApplicationRecord
+  belongs_to :user
+end

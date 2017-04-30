@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Consulting Rooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logo</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Founded since</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Address</th>
+      <th>Visit count</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consulting_rooms.each do |consulting_room| %>
+      <tr>
+        <td><%= consulting_room.logo %></td>
+        <td><%= consulting_room.name %></td>
+        <td><%= consulting_room.description %></td>
+        <td><%= consulting_room.founded_since %></td>
+        <td><%= consulting_room.state %></td>
+        <td><%= consulting_room.city %></td>
+        <td><%= consulting_room.address %></td>
+        <td><%= consulting_room.visit_count %></td>
+        <td><%= consulting_room.user %></td>
+        <td><%= link_to 'Show', consulting_room %></td>
+        <td><%= link_to 'Edit', edit_consulting_room_path(consulting_room) %></td>
+        <td><%= link_to 'Destroy', consulting_room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consulting Room', new_consulting_room_path %>

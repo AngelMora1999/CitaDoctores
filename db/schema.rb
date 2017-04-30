@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430010536) do
+ActiveRecord::Schema.define(version: 20170430012004) do
 
   create_table "clinics", force: :cascade do |t|
     t.string   "logo_file_name"
@@ -28,6 +28,24 @@ ActiveRecord::Schema.define(version: 20170430010536) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.index ["user_id"], name: "index_clinics_on_user_id"
+  end
+
+  create_table "consulting_rooms", force: :cascade do |t|
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "founded_since"
+    t.string   "state"
+    t.string   "city"
+    t.text     "address"
+    t.integer  "visit_count",       default: 0
+    t.integer  "user_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.index ["user_id"], name: "index_consulting_rooms_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
